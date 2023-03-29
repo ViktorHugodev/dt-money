@@ -1,0 +1,64 @@
+import styled from 'styled-components'
+import * as Dialog from '@radix-ui/react-dialog'
+
+export const Overlay = styled(Dialog.Overlay)`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background-color: rgba(0, 0,0,0.75);
+`
+
+export const Content = styled(Dialog.Content)`
+  border-radius: 6px;
+  /* box-shadow: 0 4px 32px rgba(0, 0, 0, 0.8); */
+  min-width: 32rem;
+  padding: 2.5rem 3rem;
+  background-color: ${props => props.theme['gray-800']};
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap:1rem;
+    input {
+      border-radius: 6px;
+      border:0;
+      background-color: ${props => props.theme['gray-900']};
+      color: ${props => props.theme['gray-100']};
+      padding: 1rem;
+
+      &::placeholder {
+        color:${props => props.theme['gray-500']};
+      }
+    }
+
+    button[type="submit"] {
+      height: 58px;
+      border:0;
+      background-color: ${props => props.theme['green-500']};
+      font-weight: bold;
+      border-radius: 6px;
+      color: ${props => props.theme.white};
+      padding: 0 1.25rem;
+      margin-top: 1.5rem;
+      &:hover {
+        background-color:${props => props.theme['green-700']}
+      }
+    }
+   
+  }
+`
+
+export const CloseButton = styled(Dialog.Close)`
+  border:0;
+  background-color: transparent;
+  top:1.5rem;
+  right: 1.5rem;
+  position: absolute;
+  line-height: 0;
+  color: ${props => props.theme['gray-500']}
+`
