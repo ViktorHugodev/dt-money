@@ -13,8 +13,16 @@
       "description": "Gasto com infra",
       "type": "outcome",
       "category": "Manutenção",
-      "price": -2000,
+      "price": 2000,
       "createdAt": "2023-03-28T19:13:19.383Z"
+    },
+    {
+      "id": 3,
+      "description": "Ignite Rockeseat",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 1980,
+      "createdAt": "2023-03-20T19:13:19.383Z"
     }
   ]
 }
