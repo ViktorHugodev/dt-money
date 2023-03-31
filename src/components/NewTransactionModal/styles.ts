@@ -45,7 +45,8 @@ export const Content = styled(Dialog.Content)`
       color: ${props => props.theme.white};
       padding: 0 1.25rem;
       margin-top: 1.5rem;
-      &:hover {
+     
+      &:not(:disabled):hover {
         background-color:${props => props.theme['green-700']}
       }
     }
@@ -74,7 +75,7 @@ export const TransactionType = styled(RadioGroup.Root)`
 `
 
 export const TransactionButton = styled(RadioGroup.Item)<TransactionTypeProps>`
-height: 58px;
+    height: 58px;
     padding: 0 1rem;
     background-color: ${props => props.theme['gray-700']};
     border-radius: 6px;
@@ -102,5 +103,7 @@ height: 58px;
         color: ${props => props.theme.white};
       }
     }
+
+ 
     
 `

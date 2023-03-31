@@ -19,6 +19,10 @@ export const GLobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
     transition: background-color 0.2s;
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
   }
   body, input, text-area, button {
     font: 400 1rem 'Roboto', sans-serif;
